@@ -117,7 +117,8 @@ Number of Lecture Hours/Week 01I + 02P</h1><h1> Exam Marks 60 </h1>
 <p>
 <h1>17CSL68 - COMPUTER GRAPHICS LABORATORY WITH MINI PROJECT </h1>
 <h1>PROGRAM - 1</h1>
-<h1>Implement Brenham’s line drawing algorithm for all types of slope.</h1>
+<h1>Implement Brenham's line drawing algorithm for all types of slope.</h1>
+<h1>Code Credits Prof Shankar S, BMSIT</h1>
 
 </p>
 
@@ -281,9 +282,9 @@ Number of Lecture Hours/Week 01I + 02P</h1><h1> Exam Marks 60 </h1>
 
 <span style="color: #66d9ef">void</span> <span style="color: #a6e22e">bresenhams_line_draw</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">x1,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">y1,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">x2,</span> <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">y2)</span>
 <span style="color: #f8f8f2">{</span>
-    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">dx</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">x2</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">x1;</span>
-    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">dy</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">y2</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">y1;</span>
-    <span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">m</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">dy</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">dx;</span>
+    <span style="color: #66d9ef">float</span> <span style="color: #f8f8f2">dx</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">x2</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">x1;</span>
+    <span style="color: #66d9ef">float</span> <span style="color: #f8f8f2">dy</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">y2</span> <span style="color: #f92672">-</span> <span style="color: #f8f8f2">y1;</span>
+    <span style="color: #66d9ef">float</span> <span style="color: #f8f8f2">m</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">dy</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">dx;</span>
 
     <span style="color: #66d9ef">if</span><span style="color: #f8f8f2">(m</span> <span style="color: #f92672">&lt;</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
     <span style="color: #f8f8f2">{</span>
