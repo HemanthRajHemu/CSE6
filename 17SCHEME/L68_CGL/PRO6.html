@@ -149,6 +149,219 @@ surfaces of the solid object used in the scene.</h1>
 <hr/>
 
 <!-- HTML generated using hilite.me --><div class="JCODE" style="background: #4a3a3a; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0;color:#f2c2c2; line-height: 125%">  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #75715e">#include&lt;GL/glut.h&gt;</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">teapot</span><span style="color: #f8f8f2">(GLfloat</span> <span style="color: #f8f8f2">x,GLfloat</span> <span style="color: #f8f8f2">y,GLfloat</span> <span style="color: #f8f8f2">z)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glPushMatrix();</span>
+    <span style="color: #f8f8f2">glTranslatef(x,</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">z);</span>
+    <span style="color: #f8f8f2">glutSolidTeapot(</span><span style="color: #ae81ff">0.1</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glPopMatrix();</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">tableTop</span><span style="color: #f8f8f2">(GLfloat</span> <span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">z)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glPushMatrix();</span>
+    <span style="color: #f8f8f2">glTranslatef(x,</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">z);</span>
+    <span style="color: #f8f8f2">glScalef(</span><span style="color: #ae81ff">0.6</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glutSolidCube(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glPopMatrix();</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">tableLeg</span><span style="color: #f8f8f2">(GLfloat</span> <span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">z)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glPushMatrix();</span>
+    <span style="color: #f8f8f2">glTranslatef(x,</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">z);</span>
+    <span style="color: #f8f8f2">glScalef(</span><span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glutSolidCube(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glPopMatrix();</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">wall</span><span style="color: #f8f8f2">(GLfloat</span> <span style="color: #f8f8f2">x,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">z)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glPushMatrix();</span>
+    <span style="color: #f8f8f2">glTranslatef(x,</span> <span style="color: #f8f8f2">y,</span> <span style="color: #f8f8f2">z);</span>
+    <span style="color: #f8f8f2">glScalef(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.02</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glutSolidCube(</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glPopMatrix();</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">light</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">mat_ambient[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">};</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">mat_diffuse[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">};</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">mat_specular[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">};</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">mat_shininess[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">50.0f</span><span style="color: #f8f8f2">};</span>
+
+    <span style="color: #f8f8f2">glMaterialfv(GL_FRONT,</span> <span style="color: #f8f8f2">GL_AMBIENT,</span> <span style="color: #f8f8f2">mat_ambient);</span>
+    <span style="color: #f8f8f2">glMaterialfv(GL_FRONT,</span> <span style="color: #f8f8f2">GL_DIFFUSE,</span> <span style="color: #f8f8f2">mat_diffuse);</span>
+    <span style="color: #f8f8f2">glMaterialfv(GL_FRONT,</span> <span style="color: #f8f8f2">GL_SPECULAR,</span> <span style="color: #f8f8f2">mat_specular);</span>
+    <span style="color: #f8f8f2">glMaterialfv(GL_FRONT,</span> <span style="color: #f8f8f2">GL_SHININESS,</span> <span style="color: #f8f8f2">mat_shininess);</span>
+
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">light_position[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">3</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">};</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">light_intensity[]</span>  <span style="color: #f92672">=</span>  <span style="color: #f8f8f2">{</span><span style="color: #ae81ff">0.7</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.7</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0.7</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">};</span>
+    <span style="color: #f8f8f2">glLightfv(GL_LIGHT0,</span> <span style="color: #f8f8f2">GL_POSITION,</span> <span style="color: #f8f8f2">light_position);</span>
+    <span style="color: #f8f8f2">glLightfv(GL_LIGHT0,</span> <span style="color: #f8f8f2">GL_DIFFUSE,</span> <span style="color: #f8f8f2">light_intensity);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">display</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">GLfloat</span> <span style="color: #f8f8f2">teapotP</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.07</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">tabletopP</span> <span style="color: #f92672">=</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.15</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">tablelegP</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.2</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">wallP</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0.5</span><span style="color: #f8f8f2">;</span>
+    <span style="color: #f8f8f2">glClear(GL_COLOR_BUFFER_BIT</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">GL_DEPTH_BUFFER_BIT);</span>
+    <span style="color: #f8f8f2">glLoadIdentity();</span>
+
+    <span style="color: #f8f8f2">gluLookAt(</span><span style="color: #f92672">-</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">2</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">5</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span>  <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">light();</span> <span style="color: #75715e">//Adding light source to your project</span>
+
+    <span style="color: #f8f8f2">teapot(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">teapotP,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span> <span style="color: #75715e">//Create teapot</span>
+
+    <span style="color: #f8f8f2">tableTop(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">tabletopP,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span> <span style="color: #75715e">//Create tableâ€™s top</span>
+
+    <span style="color: #f8f8f2">tableLeg(tablelegP,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.3</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">tablelegP);</span> <span style="color: #75715e">//Create 1st leg</span>
+    <span style="color: #f8f8f2">tableLeg(</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tablelegP,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.3</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">tablelegP);</span> <span style="color: #75715e">//Create 2nd leg</span>
+    <span style="color: #f8f8f2">tableLeg(</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">tablelegP,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.3</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">tablelegP);</span> <span style="color: #75715e">//Create 3rd leg</span>
+    <span style="color: #f8f8f2">tableLeg(tablelegP,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">0.3</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">tablelegP);</span> <span style="color: #75715e">//Create 4th leg</span>
+
+    <span style="color: #f8f8f2">wall(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">-</span><span style="color: #f8f8f2">wallP);</span> <span style="color: #75715e">//Create 1st wall</span>
+    <span style="color: #f8f8f2">glRotatef(</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">wall(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">wallP);</span> <span style="color: #75715e">//Create 2nd wall</span>
+    <span style="color: #f8f8f2">glRotatef(</span><span style="color: #ae81ff">90</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">wall(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #f8f8f2">wallP);</span> <span style="color: #75715e">//Create 3rd wall</span>
+    <span style="color: #f8f8f2">glFlush();</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">void</span> <span style="color: #a6e22e">myinit</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glClearColor(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glMatrixMode(GL_PROJECTION);</span>
+    <span style="color: #f8f8f2">glLoadIdentity();</span>
+    <span style="color: #f8f8f2">glOrtho(</span><span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #f92672">-</span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glMatrixMode(GL_MODELVIEW);</span>
+<span style="color: #f8f8f2">}</span>
+<span style="color: #66d9ef">int</span> <span style="color: #a6e22e">main</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span> <span style="color: #f8f8f2">argc,</span> <span style="color: #66d9ef">char</span> <span style="color: #f92672">**</span><span style="color: #f8f8f2">argv)</span>
+<span style="color: #f8f8f2">{</span>
+    <span style="color: #f8f8f2">glutInit(</span><span style="color: #f92672">&amp;</span><span style="color: #f8f8f2">argc,</span> <span style="color: #f8f8f2">argv);</span>
+    <span style="color: #f8f8f2">glutInitDisplayMode(GLUT_SINGLE</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">GLUT_RGB</span><span style="color: #f92672">|</span><span style="color: #f8f8f2">GLUT_DEPTH);</span>
+    <span style="color: #f8f8f2">glutInitWindowSize(</span><span style="color: #ae81ff">500</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">500</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glutInitWindowPosition(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">0</span><span style="color: #f8f8f2">);</span>
+    <span style="color: #f8f8f2">glutCreateWindow(</span><span style="color: #e6db74">&quot;Teapot on a table&quot;</span><span style="color: #f8f8f2">);</span>
+
+    <span style="color: #f8f8f2">myinit();</span>
+
+    <span style="color: #f8f8f2">glutDisplayFunc(display);</span>
+
+    <span style="color: #f8f8f2">glEnable(GL_LIGHTING);</span>
+    <span style="color: #f8f8f2">glEnable(GL_LIGHT0);</span>
+
+    <span style="color: #f8f8f2">glShadeModel(GL_SMOOTH);</span>
+
+    <span style="color: #f8f8f2">glEnable(GL_NORMALIZE);</span>
+    <span style="color: #f8f8f2">glEnable(GL_DEPTH_TEST);</span>
+
+    <span style="color: #f8f8f2">glutMainLoop();</span>
+<span style="color: #f8f8f2">}</span>
+</pre></td></tr></table></div>
 
 
 
