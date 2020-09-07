@@ -203,6 +203,8 @@
 										document.getElementById("urid").innerText = uid;
 										document.getElementById("initLoad").style.display = "none";
 										document.getElementById("grant").style.display = "block";
+										var elmnt = document.getElementById("grant");
+										elmnt.scrollIntoView();
 									}
 									else if (val1 == null) {
 										//RDAuth
@@ -253,7 +255,8 @@
 			<div class="alertA1">
 				<span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span>
 				<strong>Note</strong>
-				Login Made Mandatory to Access the Free Study Materials<br /><br /> -ADMIN
+				Login Made Mandatory to Access the Free Study Materials
+				<br />You can login Via Account Tab on Navigation Bar.<br /><br /> -ADMIN
 			</div>
 
 			<div class="desp tcenter" id="initLoad">
